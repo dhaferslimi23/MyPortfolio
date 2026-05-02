@@ -1,19 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Dhafer Slimi | IT Engineer building scalable systems and digital solutions.">
-    <meta name="keywords" content="IT Engineer, Portfolio, Software Engineering, DevOps, Systems Architecture">
+    <meta name="description" content="Dhafer Slimi | Software Engineer – Insurance &amp; Healthcare Systems">
     <meta name="author" content="Dhafer Slimi">
-    <title>Dhafer Slimi | IT Engineer</title>
+    <title>Dhafer Slimi | Software Engineer</title>
 
     <link rel="shortcut icon" href="assets/imgs/favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/portfolio-redesign.css">
 </head>
 
@@ -22,14 +21,33 @@
         <div class="container nav-inner">
             <a class="brand" href="#top">Dhafer<span>.Slimi</span></a>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#education">Education</a>
-                <a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
-                <a href="#contributions">Contributions</a>
-                <a href="#tools">Tech Stack</a>
-                <a href="#contact">Contact</a>
+                <a href="#about" data-i18n="nav.about">About</a>
+                <a href="#education" data-i18n="nav.education">Education</a>
+                <a href="#experience" data-i18n="nav.experience">Experience</a>
+                <a href="#skills" data-i18n="nav.skills">Skills</a>
+                <a href="#contributions" data-i18n="nav.contributions">Contributions</a>
+                <a href="#tools" data-i18n="nav.tools">Tech Stack</a>
+                <a href="#contact" data-i18n="nav.contact">Contact</a>
             </div>
+            <div class="lang-switcher">
+                <button class="lang-btn" aria-label="Select language" aria-expanded="false">
+                    <span class="lang-current">EN</span>
+                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true"><path d="M2 3.5L5 6.5L8 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+                </button>
+                <ul class="lang-menu" role="menu">
+                    <li><button data-lang="en" role="menuitem">🇬🇧 English</button></li>
+                    <li><button data-lang="fr" role="menuitem">🇫🇷 Français</button></li>
+                    <li><button data-lang="ar" role="menuitem">🇹🇳 العربية</button></li>
+                </ul>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light/dark mode">
+                <span class="theme-label" data-i18n="nav.theme">Theme</span>
+                <span class="theme-toggle-track" aria-hidden="true">
+                    <span class="theme-toggle-thumb"></span>
+                </span>
+                <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
         </div>
     </nav>
 
@@ -38,30 +56,30 @@
             <div class="hero-content reveal" data-hero-motion>
                 <div class="badge">
                     <span class="badge-dot" aria-hidden="true"></span>
-                    Software Engineer - Insurance and Healthcare Systems
+                    <span data-i18n="hero.badge">Software Engineer – Insurance and Healthcare Systems</span>
                 </div>
                 <h1 class="hero-title">DHAFER SLIMI</h1>
-                <p class="hero-copy">
+                <p class="hero-copy" data-i18n="hero.copy">
                     Software Engineer with hands-on experience delivering enterprise-grade platforms for insurance and
                     healthcare domains. Contributed to and led multiple projects focused on reimbursement systems,
                     medical coverage, and payment lifecycle management, supporting multiple clients simultaneously.
                 </p>
                 <div class="hero-actions">
-                    <a class="btn btn-primary" href="#experience">View Experience</a>
-                    <a class="btn btn-secondary" href="#contact">Contact Me</a>
+                    <a class="btn btn-primary" href="#experience" data-i18n="hero.cta1">View Experience</a>
+                    <a class="btn btn-secondary" href="#contact" data-i18n="hero.cta2">Contact Me</a>
                 </div>
                 <div class="hero-metrics">
                     <article class="metric">
                         <strong>3</strong>
-                        <span>Clients supervised in parallel</span>
+                        <span data-i18n="hero.metric1">Clients supervised in parallel</span>
                     </article>
                     <article class="metric">
                         <strong>2023</strong>
-                        <span>Software Architecture Engineer diploma</span>
+                        <span data-i18n="hero.metric2">Software Architecture Engineer diploma</span>
                     </article>
                     <article class="metric">
                         <strong>B2</strong>
-                        <span>English and French proficiency</span>
+                        <span data-i18n="hero.metric3">English and French proficiency</span>
                     </article>
                 </div>
             </div>
@@ -73,9 +91,9 @@
                     <div class="profile-meta">
                         <div>
                             <strong>Dhafer Slimi</strong>
-                            <span>Software Engineer</span>
+                            <span data-i18n="hero.role">Software Engineer</span>
                         </div>
-                        <span>Ariena, Tunis</span>
+                        <span data-i18n="hero.location">Ariena, Tunis</span>
                     </div>
                 </div>
             </div>
@@ -85,7 +103,7 @@
     <main>
         <section class="clients-section">
             <div class="container">
-                <p class="clients-label">Clients &amp; partners I have worked with</p>
+                <p class="clients-label" data-i18n="clients.label">Clients &amp; partners I have worked with</p>
             </div>
             <div class="clients-track-wrap" aria-label="Clients">
                 <div class="clients-track">
@@ -114,9 +132,9 @@
         <section class="section" id="about">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="section-kicker">About Me</span>
-                    <h2 class="section-title">Enterprise software engineer focused on health and insurance workflows</h2>
-                    <p class="section-copy">
+                    <span class="section-kicker" data-i18n="about.kicker">About Me</span>
+                    <h2 class="section-title" data-i18n="about.title">Enterprise software engineer focused on health and insurance workflows</h2>
+                    <p class="section-copy" data-i18n="about.copy">
                         I design and deliver robust digital systems that simplify complex business processes. My work
                         combines architecture, implementation, and operational execution to create reliable platforms
                         for reimbursement, medical coverage, claims management, and payment lifecycle operations.
@@ -125,23 +143,22 @@
                 <div class="grid-12">
                     <div class="value-list">
                         <article class="value-card reveal">
-                            <h3>Domain Focus</h3>
-                            <p>Insurance and healthcare systems with enterprise reliability and compliance-oriented workflows.</p>
+                            <h3 data-i18n="about.card1.title">Domain Focus</h3>
+                            <p data-i18n="about.card1.body">Insurance and healthcare systems with enterprise reliability and compliance-oriented workflows.</p>
                         </article>
                         <article class="value-card reveal">
-                            <h3>Execution Model</h3>
-                            <p>Owns scoping, planning, development, testing, and deployment across multi-client programs.</p>
+                            <h3 data-i18n="about.card2.title">Execution Model</h3>
+                            <p data-i18n="about.card2.body">Owns scoping, planning, development, testing, and deployment across multi-client programs.</p>
                         </article>
                         <article class="value-card reveal">
-                            <h3>Platform Strength</h3>
-                            <p>Builds full-stack systems with secure APIs, strong data models, and production-grade operations.</p>
+                            <h3 data-i18n="about.card3.title">Platform Strength</h3>
+                            <p data-i18n="about.card3.body">Builds full-stack systems with secure APIs, strong data models, and production-grade operations.</p>
                         </article>
                         <article class="value-card reveal">
-                            <h3>Leadership Impact</h3>
-                            <p>Coordinates teams, manages risk, and drives technical decisions while contributing hands-on.</p>
+                            <h3 data-i18n="about.card4.title">Leadership Impact</h3>
+                            <p data-i18n="about.card4.body">Coordinates teams, manages risk, and drives technical decisions while contributing hands-on.</p>
                         </article>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -149,9 +166,9 @@
         <section class="section" id="education">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="section-kicker">Education</span>
-                    <h2 class="section-title">Software Architecture Engineer</h2>
-                    <p class="section-copy">Diploma - ESPRIT - Tunis | 2018 - 2023</p>
+                    <span class="section-kicker" data-i18n="edu.kicker">Education</span>
+                    <h2 class="section-title" data-i18n="edu.title">Software Architecture Engineer</h2>
+                    <p class="section-copy" data-i18n="edu.copy">Diploma – ESPRIT – Tunis | 2018 – 2023</p>
                 </div>
             </div>
         </section>
@@ -159,37 +176,34 @@
         <section class="section" id="experience">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="section-kicker">Work Experience</span>
-                    <h2 class="section-title">Delivered and led software initiatives in insurance and healthcare</h2>
+                    <span class="section-kicker" data-i18n="exp.kicker">Work Experience</span>
+                    <h2 class="section-title" data-i18n="exp.title">Delivered and led software initiatives in insurance and healthcare</h2>
                 </div>
                 <div class="project-grid exp-grid-2">
                     <article class="project-card reveal">
-                        <small>Digihealth Services and Solutions (DH-SS)</small>
+                        <small data-i18n="exp.dh.company">Digihealth Services and Solutions (DH-SS)</small>
                         <div class="exp-roles">
                             <div class="exp-role">
                                 <div class="exp-role-header">
-                                    <h3>Software Developer</h3>
+                                    <h3 data-i18n="exp.dh.role1.title">Software Developer</h3>
                                     <span class="exp-date">2023</span>
                                 </div>
-                                <p>Developed workflows for reimbursement and contribution systems. Built backend services, queries, and unit tests. Integrated new features into existing enterprise platforms.</p>
+                                <p data-i18n="exp.dh.role1.body">Developed workflows for reimbursement and contribution systems. Built backend services, queries, and unit tests. Integrated new features into existing enterprise platforms.</p>
                             </div>
                             <div class="exp-role-divider"></div>
                             <div class="exp-role">
                                 <div class="exp-role-header">
-                                    <h3>Team Lead</h3>
-                                    <span class="exp-date">2023 – present</span>
+                                    <h3 data-i18n="exp.dh.role2.title">Team Lead</h3>
+                                    <span class="exp-date" data-i18n="exp.dh.role2.date">2023 – present</span>
                                 </div>
-                                <p>Supervise and deliver solutions for 3 clients in insurance and healthcare. Manage project lifecycle: scoping, planning, development, testing, and deployment. Coordinate teams, manage risks, and drive technical decisions. Contribute hands-on through APIs, deployments, and database management.</p>
+                                <p data-i18n="exp.dh.role2.body">Supervise and deliver solutions for 3 clients in insurance and healthcare. Manage project lifecycle: scoping, planning, development, testing, and deployment. Coordinate teams, manage risks, and drive technical decisions. Contribute hands-on through APIs, deployments, and database management.</p>
                             </div>
                         </div>
                     </article>
                     <article class="project-card reveal">
-                        <small>Orange | 2021 – 2023</small>
-                        <h3>Software Developer Intern</h3>
-                        <p>
-                            Built a multilingual CMS (MERN stack) for Orange Foundation Tunisia.
-                            Implemented back-office content management and CI workflows.
-                        </p>
+                        <small data-i18n="exp.orange.company">Orange | 2021 – 2023</small>
+                        <h3 data-i18n="exp.orange.title">Software Developer Intern</h3>
+                        <p data-i18n="exp.orange.body">Built a multilingual CMS (MERN stack) for Orange Foundation Tunisia. Implemented back-office content management and CI workflows.</p>
                     </article>
                 </div>
             </div>
@@ -198,97 +212,68 @@
         <section class="section" id="skills">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="section-kicker">Skills &amp; Expertise</span>
-                    <h2 class="section-title">Personal, professional, and communication capabilities</h2>
+                    <span class="section-kicker" data-i18n="skills.kicker">Skills &amp; Expertise</span>
+                    <h2 class="section-title" data-i18n="skills.title">Personal, professional, and communication capabilities</h2>
                 </div>
                 <div class="cards-grid">
                     <article class="skill-card reveal">
                         <div class="card-icon">PS</div>
-                        <h3>Personal Skills</h3>
-                        <p>Leadership, management skills, time management, communication skills, and critical thinking.</p>
+                        <h3 data-i18n="skills.personal.title">Personal Skills</h3>
+                        <p data-i18n="skills.personal.body">Leadership, management skills, time management, communication skills, and critical thinking.</p>
                         <div class="skill-tags">
-                            <span>Leadership</span>
-                            <span>Management Skills</span>
-                            <span>Time Management</span>
-                            <span>Communication Skills</span>
-                            <span>Critical Thinking</span>
+                            <span data-i18n="skills.personal.t1">Leadership</span>
+                            <span data-i18n="skills.personal.t2">Management Skills</span>
+                            <span data-i18n="skills.personal.t3">Time Management</span>
+                            <span data-i18n="skills.personal.t4">Communication Skills</span>
+                            <span data-i18n="skills.personal.t5">Critical Thinking</span>
                         </div>
                     </article>
                     <article class="skill-card reveal">
                         <div class="card-icon">PR</div>
-                        <h3>Professional Skills</h3>
-                        <p>Full-stack engineering and workflow design for secure, scalable enterprise systems.</p>
+                        <h3 data-i18n="skills.pro.title">Professional Skills</h3>
+                        <p data-i18n="skills.pro.body">Full-stack engineering and workflow design for secure, scalable enterprise systems.</p>
                         <div class="skill-tags">
-                            <span>Full-Stack Development</span>
-                            <span>Workflow and Business Process Engineering</span>
-                            <span>REST API Design and Secure Architecture</span>
-                            <span>Project Leadership and Agile Coordination</span>
+                            <span data-i18n="skills.pro.t1">Full-Stack Development</span>
+                            <span data-i18n="skills.pro.t2">Workflow and Business Process Engineering</span>
+                            <span data-i18n="skills.pro.t3">REST API Design and Secure Architecture</span>
+                            <span data-i18n="skills.pro.t4">Project Leadership and Agile Coordination</span>
                         </div>
                     </article>
                     <article class="skill-card reveal">
                         <div class="card-icon">LG</div>
-                        <h3>Languages</h3>
-                        <p>Strong communication across multicultural teams and stakeholders.</p>
+                        <h3 data-i18n="skills.lang.title">Languages</h3>
+                        <p data-i18n="skills.lang.body">Strong communication across multicultural teams and stakeholders.</p>
                         <div class="skill-tags">
-                            <span>English - B2</span>
-                            <span>French - B2</span>
-                            <span>Arabic - Native</span>
+                            <span data-i18n="skills.lang.t1">English – B2</span>
+                            <span data-i18n="skills.lang.t2">French – B2</span>
+                            <span data-i18n="skills.lang.t3">Arabic – Native</span>
                         </div>
                     </article>
                 </div>
-
             </div>
         </section>
 
         <section class="section" id="contributions">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="section-kicker">Key Contributions &amp; Responsibilities</span>
-                    <h2 class="section-title">Hands-on delivery across architecture, security, data, and operations</h2>
+                    <span class="section-kicker" data-i18n="contrib.kicker">Key Contributions &amp; Responsibilities</span>
+                    <h2 class="section-title" data-i18n="contrib.title">Hands-on delivery across architecture, security, data, and operations</h2>
                 </div>
                 <div class="timeline">
-                    <article class="timeline-item reveal">
-                        <p>Designed and delivered full-stack enterprise applications using Spring Boot, Vaadin, React, and Node.js, enabling end-to-end workflows for claims processing, reimbursement, preapproval, and payment management.</p>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <p>Led and coordinated projects for multiple clients in parallel, defining scope, requirements, and delivery roadmaps while ensuring alignment with business needs.</p>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <p>Engineered state-driven workflow systems managing claims, financial operations, and batch processing with validation checkpoints and audit-ready flows.</p>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <p>Developed and secured RESTful APIs for web and mobile applications, including JWT-based authentication and scalable session management strategies.</p>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <p>Implemented role-based access control (RBAC) using Spring Security to secure multi-actor platforms (back-office, providers, insurers).</p>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <p>Modeled and optimized relational databases (SQL/MySQL), writing advanced queries for high-performance data access and reporting.</p>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <p>Built analytics dashboards and reporting systems, providing real-time insights into financial and operational performance.</p>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <p>Developed rule-based engines handling insurance logic such as coverage limits, eligibility rules, and reimbursement validation.</p>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <p>Implemented document generation and reporting pipelines (PDF exports) and file management systems with integrity controls.</p>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <p>Automated operations using scheduled jobs (batch processing, backups, maintenance), improving system reliability.</p>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <p>Contributed to DevOps practices, including Git branching strategies, CI workflows, and deployments to pre-prod and production environments.</p>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <p>Produced and maintained API documentation (Swagger/OpenAPI) to streamline frontend and mobile integrations.</p>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <p>Supported functional testing, requirement analysis, and technical specifications, ensuring high-quality delivery.</p>
-                    </article>
-                    <article class="timeline-item reveal">
-                        <p>Coordinated with stakeholders, managed risks, tracked progress, and ensured adherence to timelines and budgets.</p>
-                    </article>
+                    <article class="timeline-item reveal"><p data-i18n="contrib.c1">Designed and delivered full-stack enterprise applications using Spring Boot, Vaadin, React, and Node.js, enabling end-to-end workflows for claims processing, reimbursement, preapproval, and payment management.</p></article>
+                    <article class="timeline-item reveal"><p data-i18n="contrib.c2">Led and coordinated projects for multiple clients in parallel, defining scope, requirements, and delivery roadmaps while ensuring alignment with business needs.</p></article>
+                    <article class="timeline-item reveal"><p data-i18n="contrib.c3">Engineered state-driven workflow systems managing claims, financial operations, and batch processing with validation checkpoints and audit-ready flows.</p></article>
+                    <article class="timeline-item reveal"><p data-i18n="contrib.c4">Developed and secured RESTful APIs for web and mobile applications, including JWT-based authentication and scalable session management strategies.</p></article>
+                    <article class="timeline-item reveal"><p data-i18n="contrib.c5">Implemented role-based access control (RBAC) using Spring Security to secure multi-actor platforms (back-office, providers, insurers).</p></article>
+                    <article class="timeline-item reveal"><p data-i18n="contrib.c6">Modeled and optimized relational databases (SQL/MySQL), writing advanced queries for high-performance data access and reporting.</p></article>
+                    <article class="timeline-item reveal"><p data-i18n="contrib.c7">Built analytics dashboards and reporting systems, providing real-time insights into financial and operational performance.</p></article>
+                    <article class="timeline-item reveal"><p data-i18n="contrib.c8">Developed rule-based engines handling insurance logic such as coverage limits, eligibility rules, and reimbursement validation.</p></article>
+                    <article class="timeline-item reveal"><p data-i18n="contrib.c9">Implemented document generation and reporting pipelines (PDF exports) and file management systems with integrity controls.</p></article>
+                    <article class="timeline-item reveal"><p data-i18n="contrib.c10">Automated operations using scheduled jobs (batch processing, backups, maintenance), improving system reliability.</p></article>
+                    <article class="timeline-item reveal"><p data-i18n="contrib.c11">Contributed to DevOps practices, including Git branching strategies, CI workflows, and deployments to pre-prod and production environments.</p></article>
+                    <article class="timeline-item reveal"><p data-i18n="contrib.c12">Produced and maintained API documentation (Swagger/OpenAPI) to streamline frontend and mobile integrations.</p></article>
+                    <article class="timeline-item reveal"><p data-i18n="contrib.c13">Supported functional testing, requirement analysis, and technical specifications, ensuring high-quality delivery.</p></article>
+                    <article class="timeline-item reveal"><p data-i18n="contrib.c14">Coordinated with stakeholders, managed risks, tracked progress, and ensured adherence to timelines and budgets.</p></article>
                 </div>
             </div>
         </section>
@@ -296,8 +281,8 @@
         <section class="section" id="tools">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="section-kicker">Tools &amp; Technologies</span>
-                    <h2 class="section-title">Core stack used in delivery</h2>
+                    <span class="section-kicker" data-i18n="tools.kicker">Tools &amp; Technologies</span>
+                    <h2 class="section-title" data-i18n="tools.title">Core stack used in delivery</h2>
                 </div>
                 <div class="tools-marquee reveal" aria-label="Technologies">
                     <div class="marquee-track">
@@ -332,33 +317,33 @@
         <section class="section" id="contact">
             <div class="container contact-grid">
                 <div class="contact-main reveal">
-                    <span class="section-kicker">Contact</span>
-                    <h2>I build systems that simplify complexity and deliver real impact.</h2>
-                    <p>
+                    <span class="section-kicker" data-i18n="contact.kicker">Contact</span>
+                    <h2 data-i18n="contact.headline">I build systems that simplify complexity and deliver real impact.</h2>
+                    <p data-i18n="contact.copy">
                         If you need a software engineer who can lead enterprise delivery and build secure,
                         scalable systems for healthcare and insurance products, I am available to collaborate.
                     </p>
                     <div class="contact-actions">
-                        <a class="btn btn-primary" href="mailto:dhaferslimi81@gmail.com">Email Me</a>
-                        <a class="btn btn-secondary" href="tel:+21650232226">Call Me</a>
-                        <a class="btn btn-secondary" href="https://dhaferslimi23.github.io/MyPortfolio/" target="_blank" rel="noopener noreferrer">Portfolio URL</a>
+                        <a class="btn btn-primary" href="mailto:dhaferslimi81@gmail.com" data-i18n="contact.email_btn">Email Me</a>
+                        <a class="btn btn-secondary" href="tel:+21650232226" data-i18n="contact.call_btn">Call Me</a>
+                        <a class="btn btn-secondary" href="https://dhaferslimi23.github.io/MyPortfolio/" target="_blank" rel="noopener noreferrer" data-i18n="contact.portfolio_btn">Portfolio URL</a>
                     </div>
                 </div>
                 <div class="contact-side">
                     <article class="contact-card reveal">
-                        <strong>Email</strong>
+                        <strong data-i18n="contact.card_email">Email</strong>
                         <a href="mailto:dhaferslimi81@gmail.com">dhaferslimi81@gmail.com</a>
                     </article>
                     <article class="contact-card reveal">
-                        <strong>Phone</strong>
+                        <strong data-i18n="contact.card_phone">Phone</strong>
                         <span>+216 50 232 226</span>
                     </article>
                     <article class="contact-card reveal">
-                        <strong>Location</strong>
-                        <span>Ariena, Tunis</span>
+                        <strong data-i18n="contact.card_location">Location</strong>
+                        <span data-i18n="hero.location">Ariena, Tunis</span>
                     </article>
                     <article class="contact-card reveal">
-                        <strong>Website</strong>
+                        <strong data-i18n="contact.card_website">Website</strong>
                         <a href="https://dhaferslimi23.github.io/MyPortfolio/" target="_blank" rel="noopener noreferrer">dhaferslimi23.github.io/MyPortfolio/</a>
                     </article>
                 </div>
@@ -368,11 +353,12 @@
 
     <footer class="footer">
         <div class="container footer-inner">
-            <span>© <span id="year">2026</span> Dhafer Slimi. Built with precision and intent.</span>
-            <span>Engineering systems for measurable outcomes.</span>
+            <span>© <span id="year">2026</span> Dhafer Slimi. <span data-i18n="footer.copy">Built with precision and intent.</span></span>
+            <span data-i18n="footer.tagline">Engineering systems for measurable outcomes.</span>
         </div>
     </footer>
 
+    <script src="assets/js/translations.js"></script>
     <script src="assets/js/portfolio-redesign.js"></script>
 </body>
 
