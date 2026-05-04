@@ -305,13 +305,13 @@
         <section class="section kpi-section" id="kpi">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="section-kicker">KPI &amp; Performance</span>
-                    <h2 class="section-title">Engineering Impact Dashboard</h2>
+                    <span class="section-kicker" data-i18n="kpi.kicker">KPI &amp; Performance</span>
+                    <h2 class="section-title" data-i18n="kpi.title">Engineering Impact Dashboard</h2>
                     <div class="kpi-context-badge">
                         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg>
-                        Scoped to <strong>Digihealth Services and Solutions (DH-SS)</strong> experience only
+                        <span data-i18n="kpi.badge_pre">Scoped to</span> <strong>Digihealth Services and Solutions (DH-SS)</strong> <span data-i18n="kpi.badge_post">experience only</span>
                     </div>
-                    <p class="section-copy">Quantified contribution across system reliability, release engineering, and production stability — measured across live enterprise platforms.</p>
+                    <p class="section-copy" data-i18n="kpi.copy">Quantified contribution across system reliability, release engineering, and production stability — measured across live enterprise platforms.</p>
                 </div>
 
                 <div class="kpi-grid">
@@ -320,18 +320,18 @@
                     <div class="kpi-subsection reveal">
                         <h3 class="kpi-sub-title">
                             <span class="kpi-index">01</span>
-                            System Performance &amp; Reliability Engineering
+                            <span data-i18n="kpi.sub1_title">System Performance &amp; Reliability Engineering</span>
                         </h3>
                         <div class="kpi-cards">
                             <article class="kpi-card">
                                 <div class="kpi-number">100<span class="kpi-sup">+</span></div>
-                                <div class="kpi-card-label">Production Anomalies Resolved</div>
-                                <p class="kpi-card-desc">Stabilized system performance by resolving production-level anomalies and edge cases, improving platform robustness and reducing recurring failure patterns across releases.</p>
+                                <div class="kpi-card-label" data-i18n="kpi.card1_label">Production Anomalies Resolved</div>
+                                <p class="kpi-card-desc" data-i18n="kpi.card1_desc">Stabilized system performance by resolving production-level anomalies and edge cases, improving platform robustness and reducing recurring failure patterns across releases.</p>
                             </article>
                             <article class="kpi-card">
                                 <div class="kpi-number">253<span class="kpi-sup"> files</span></div>
-                                <div class="kpi-card-label">~42% of Codebase Footprint</div>
-                                <p class="kpi-card-desc">Owned system health across a broad surface area, demonstrating deep multi-module responsibility and architectural awareness.</p>
+                                <div class="kpi-card-label" data-i18n="kpi.card2_label">~42% of Codebase Footprint</div>
+                                <p class="kpi-card-desc" data-i18n="kpi.card2_desc">Owned system health across a broad surface area, demonstrating deep multi-module responsibility and architectural awareness.</p>
                             </article>
                         </div>
                     </div>
@@ -340,18 +340,18 @@
                     <div class="kpi-subsection reveal">
                         <h3 class="kpi-sub-title">
                             <span class="kpi-index">02</span>
-                            Release Engineering &amp; Operational Execution
+                            <span data-i18n="kpi.sub2_title">Release Engineering &amp; Operational Execution</span>
                         </h3>
                         <div class="kpi-cards">
                             <article class="kpi-card">
                                 <div class="kpi-number">25<span class="kpi-sup">+</span></div>
-                                <div class="kpi-card-label">Cross-Branch Release Cycles</div>
-                                <p class="kpi-card-desc">Coordinated cross-branch integration and release cycles, ensuring smooth convergence of parallel development streams into production.</p>
+                                <div class="kpi-card-label" data-i18n="kpi.card3_label">Cross-Branch Release Cycles</div>
+                                <p class="kpi-card-desc" data-i18n="kpi.card3_desc">Coordinated cross-branch integration and release cycles, ensuring smooth convergence of parallel development streams into production.</p>
                             </article>
                             <article class="kpi-card">
                                 <div class="kpi-number">99<span class="kpi-sup"> merges</span></div>
-                                <div class="kpi-card-label">~21% of Total Activity</div>
-                                <p class="kpi-card-desc">Reduced integration friction, prevented regressions, and maintained delivery flow stability across all active branches.</p>
+                                <div class="kpi-card-label" data-i18n="kpi.card4_label">~21% of Total Activity</div>
+                                <p class="kpi-card-desc" data-i18n="kpi.card4_desc">Reduced integration friction, prevented regressions, and maintained delivery flow stability across all active branches.</p>
                             </article>
                             <article class="kpi-card kpi-card--ratio">
                                 <div class="kpi-ratio-wrap">
@@ -364,12 +364,12 @@
                                         </div>
                                     </div>
                                     <div class="kpi-ratio-legend">
-                                        <span class="kpi-legend-dot kpi-legend-stab"></span><span>Stabilization</span>
-                                        <span class="kpi-legend-dot kpi-legend-feat"></span><span>Feature Delivery</span>
+                                        <span class="kpi-legend-dot kpi-legend-stab"></span><span data-i18n="kpi.legend_stab">Stabilization</span>
+                                        <span class="kpi-legend-dot kpi-legend-feat"></span><span data-i18n="kpi.legend_feat">Feature Delivery</span>
                                     </div>
                                 </div>
-                                <div class="kpi-card-label">Engineering Balance Ratio</div>
-                                <p class="kpi-card-desc">Balanced engineering profile ensuring both system progress and production reliability across every release cycle.</p>
+                                <div class="kpi-card-label" data-i18n="kpi.card5_label">Engineering Balance Ratio</div>
+                                <p class="kpi-card-desc" data-i18n="kpi.card5_desc">Balanced engineering profile ensuring both system progress and production reliability across every release cycle.</p>
                             </article>
                         </div>
                     </div>
@@ -378,23 +378,23 @@
                     <div class="kpi-subsection reveal">
                         <h3 class="kpi-sub-title">
                             <span class="kpi-index">03</span>
-                            Production Stability &amp; Continuous Improvement
+                            <span data-i18n="kpi.sub3_title">Production Stability &amp; Continuous Improvement</span>
                         </h3>
                         <div class="kpi-cards">
                             <article class="kpi-card">
                                 <div class="kpi-number">135<span class="kpi-sup"> fixes</span></div>
-                                <div class="kpi-card-label">~28% of Total Output</div>
-                                <p class="kpi-card-desc">Bug-fix commits focused on production defect elimination and system hardening, continuously reducing recurring failure patterns.</p>
+                                <div class="kpi-card-label" data-i18n="kpi.card6_label">~28% of Total Output</div>
+                                <p class="kpi-card-desc" data-i18n="kpi.card6_desc">Bug-fix commits focused on production defect elimination and system hardening, continuously reducing recurring failure patterns.</p>
                             </article>
                             <article class="kpi-card kpi-card--pillars">
                                 <ul class="kpi-pillars">
-                                    <li><span class="kpi-pillar-dot" aria-hidden="true"></span>Defect Elimination</li>
-                                    <li><span class="kpi-pillar-dot" aria-hidden="true"></span>Edge-Case Hardening</li>
-                                    <li><span class="kpi-pillar-dot" aria-hidden="true"></span>Long-Term System Stability</li>
-                                    <li><span class="kpi-pillar-dot" aria-hidden="true"></span>Operational Resilience</li>
+                                    <li><span class="kpi-pillar-dot" aria-hidden="true"></span><span data-i18n="kpi.pillar1">Defect Elimination</span></li>
+                                    <li><span class="kpi-pillar-dot" aria-hidden="true"></span><span data-i18n="kpi.pillar2">Edge-Case Hardening</span></li>
+                                    <li><span class="kpi-pillar-dot" aria-hidden="true"></span><span data-i18n="kpi.pillar3">Long-Term System Stability</span></li>
+                                    <li><span class="kpi-pillar-dot" aria-hidden="true"></span><span data-i18n="kpi.pillar4">Operational Resilience</span></li>
                                 </ul>
-                                <div class="kpi-card-label">Stability Pillars</div>
-                                <p class="kpi-card-desc">Strengthened operational resilience by identifying and eliminating edge-case behaviors under real-world usage conditions.</p>
+                                <div class="kpi-card-label" data-i18n="kpi.card7_label">Stability Pillars</div>
+                                <p class="kpi-card-desc" data-i18n="kpi.card7_desc">Strengthened operational resilience by identifying and eliminating edge-case behaviors under real-world usage conditions.</p>
                             </article>
                         </div>
                     </div>
@@ -408,42 +408,42 @@
         <section class="section growth-acceleration-section" id="growth-acceleration">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="section-kicker">Growth Acceleration</span>
-                    <h2 class="section-title">Growth Acceleration</h2>
+                    <span class="section-kicker" data-i18n="growth.kicker">Growth Acceleration</span>
+                    <h2 class="section-title" data-i18n="growth.title">Growth Acceleration</h2>
                     <div class="growth-context-line">
-                        <span class="growth-context-chip">4-year-old startup</span>
+                        <span class="growth-context-chip" data-i18n="growth.chip">4-year-old startup</span>
                         <span class="growth-context-range">2024 &rarr; 2026</span>
                     </div>
-                    <p class="growth-contribution-line">Contributed to 3 years of growth within a 4-year-old startup</p>
-                    <p class="section-copy">Scaling a 4-year-old startup under exponential operational load</p>
-                    <p class="growth-scope-note">Metrics reflect growth observed between 2024 and 2026</p>
+                    <p class="growth-contribution-line" data-i18n="growth.contribution">Contributed to 3 years of growth within a 4-year-old startup</p>
+                    <p class="section-copy" data-i18n="growth.copy">Scaling a 4-year-old startup under exponential operational load</p>
+                    <p class="growth-scope-note" data-i18n="growth.scope_note">Metrics reflect growth observed between 2024 and 2026</p>
                 </div>
 
                 <div class="growth-grid" aria-label="Growth acceleration telemetry">
                     <article class="growth-card" style="--growth-accent: #ff3b3b; --growth-delay: 0ms;">
-                        <div class="growth-card-label">Clients</div>
+                        <div class="growth-card-label" data-i18n="growth.label_clients">Clients</div>
                         <div class="growth-card-metric"><span class="growth-value" data-count-to="248">0</span>%</div>
                     </article>
 
                     <article class="growth-card" style="--growth-accent: #2f8dff; --growth-delay: 110ms;">
-                        <div class="growth-card-label">Members</div>
+                        <div class="growth-card-label" data-i18n="growth.label_members">Members</div>
                         <div class="growth-card-metric"><span class="growth-value" data-count-to="1120">0</span>%</div>
                     </article>
 
                     <article class="growth-card" style="--growth-accent: #38d27a; --growth-delay: 220ms;">
-                        <div class="growth-card-label">Beneficiaries</div>
+                        <div class="growth-card-label" data-i18n="growth.label_beneficiaries">Beneficiaries</div>
                         <div class="growth-card-metric"><span class="growth-value" data-count-to="1040">0</span>%</div>
                     </article>
 
                     <article class="growth-card" style="--growth-accent: #ffd447; --growth-delay: 330ms;">
-                        <div class="growth-card-label">Batches</div>
+                        <div class="growth-card-label" data-i18n="growth.label_batches">Batches</div>
                         <div class="growth-card-metric"><span class="growth-value" data-count-to="1470">0</span>%</div>
                     </article>
                 </div>
 
                 <div class="growth-appreciation-block reveal" aria-label="Growth attribution note">
-                    <p>This growth reflects a collective effort — driven by strong market traction and executed through consistent engineering delivery.</p>
-                    <p>Special appreciation to the marketing team for accelerating acquisition, and to the development team for sustaining system performance under increasing scale.</p>
+                    <p data-i18n="growth.appreciation1">This growth reflects a collective effort — driven by strong market traction and executed through consistent engineering delivery.</p>
+                    <p data-i18n="growth.appreciation2">Special appreciation to the marketing team for accelerating acquisition, and to the development team for sustaining system performance under increasing scale.</p>
                 </div>
             </div>
         </section>
@@ -478,13 +478,13 @@
         <section class="section ai-signals-section" id="ai-signals">
             <div class="container">
                 <div class="section-header reveal">
-                    <span class="section-kicker">AI-Augmented Engineering</span>
-                    <h2 class="section-title">AI-Augmented Engineering Signals</h2>
+                    <span class="section-kicker" data-i18n="ai.kicker">AI-Augmented Engineering</span>
+                    <h2 class="section-title" data-i18n="ai.title">AI-Augmented Engineering Signals</h2>
                     <div class="ai-signals-meta-badge">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                        Systemized development indicators — AI-enabled engineering profile
+                        <span data-i18n="ai.badge">Systemized development indicators — AI-enabled engineering profile</span>
                     </div>
-                    <p class="section-copy">Observable behavioral signals across commit cadence, codebase coverage, integration throughput, and workflow structure — reflecting AI-enhanced execution discipline and engineering scalability.</p>
+                    <p class="section-copy" data-i18n="ai.copy">Observable behavioral signals across commit cadence, codebase coverage, integration throughput, and workflow structure — reflecting AI-enhanced execution discipline and engineering scalability.</p>
                 </div>
 
                 <div class="ai-signals-grid reveal">
@@ -494,9 +494,9 @@
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
                         </div>
                         <div class="ai-signal-number">99<span class="ai-signal-unit"> merges</span></div>
-                        <h3 class="ai-signal-title">High-Frequency Cross-Branch Integration</h3>
-                        <p class="ai-signal-desc">Sustained involvement in merging, aligning, and converging parallel development streams with low friction and minimal regression — a pattern indicative of systematic integration discipline.</p>
-                        <div class="ai-signal-tag">Integration Throughput</div>
+                        <h3 class="ai-signal-title" data-i18n="ai.signal1_title">High-Frequency Cross-Branch Integration</h3>
+                        <p class="ai-signal-desc" data-i18n="ai.signal1_desc">Sustained involvement in merging, aligning, and converging parallel development streams with low friction and minimal regression — a pattern indicative of systematic integration discipline.</p>
+                        <div class="ai-signal-tag" data-i18n="ai.signal1_tag">Integration Throughput</div>
                     </article>
 
                     <article class="ai-signal-card">
@@ -504,9 +504,9 @@
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
                         </div>
                         <div class="ai-signal-number">253<span class="ai-signal-unit"> files</span></div>
-                        <h3 class="ai-signal-title">Large-Scale Codebase Footprint</h3>
-                        <p class="ai-signal-desc">Contributions spanning ~42% of the codebase surface area signal deep architectural familiarity, cross-module ownership, and the kind of broad-scope awareness that scales with AI-assisted code navigation and synthesis.</p>
-                        <div class="ai-signal-tag">Architectural Coverage</div>
+                        <h3 class="ai-signal-title" data-i18n="ai.signal2_title">Large-Scale Codebase Footprint</h3>
+                        <p class="ai-signal-desc" data-i18n="ai.signal2_desc">Contributions spanning ~42% of the codebase surface area signal deep architectural familiarity, cross-module ownership, and the kind of broad-scope awareness that scales with AI-assisted code navigation and synthesis.</p>
+                        <div class="ai-signal-tag" data-i18n="ai.signal2_tag">Architectural Coverage</div>
                     </article>
 
                     <article class="ai-signal-card">
@@ -514,9 +514,9 @@
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
                         </div>
                         <div class="ai-signal-number">480<span class="ai-signal-unit">+ commits</span></div>
-                        <h3 class="ai-signal-title">Sustained High-Throughput Delivery</h3>
-                        <p class="ai-signal-desc">Consistent engineering output across extended delivery cycles — not burst-driven, but cadence-driven. Reflects the kind of sustained throughput enabled by structured workflow automation and AI-assisted task execution.</p>
-                        <div class="ai-signal-tag">Delivery Cadence</div>
+                        <h3 class="ai-signal-title" data-i18n="ai.signal3_title">Sustained High-Throughput Delivery</h3>
+                        <p class="ai-signal-desc" data-i18n="ai.signal3_desc">Consistent engineering output across extended delivery cycles — not burst-driven, but cadence-driven. Reflects the kind of sustained throughput enabled by structured workflow automation and AI-assisted task execution.</p>
+                        <div class="ai-signal-tag" data-i18n="ai.signal3_tag">Delivery Cadence</div>
                     </article>
 
                     <article class="ai-signal-card">
@@ -524,9 +524,9 @@
                             <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
                         </div>
                         <div class="ai-signal-number">30<span class="ai-signal-unit">% stabilization</span></div>
-                        <h3 class="ai-signal-title">Structured &amp; Repetitive Workflow Patterns</h3>
-                        <p class="ai-signal-desc">Disciplined, systematic execution across fix cycles, configuration updates, and reporting changes — exhibiting the efficiency-oriented repetition and process normalization characteristic of AI-augmented engineering practices.</p>
-                        <div class="ai-signal-tag">Workflow Systematization</div>
+                        <h3 class="ai-signal-title" data-i18n="ai.signal4_title">Structured &amp; Repetitive Workflow Patterns</h3>
+                        <p class="ai-signal-desc" data-i18n="ai.signal4_desc">Disciplined, systematic execution across fix cycles, configuration updates, and reporting changes — exhibiting the efficiency-oriented repetition and process normalization characteristic of AI-augmented engineering practices.</p>
+                        <div class="ai-signal-tag" data-i18n="ai.signal4_tag">Workflow Systematization</div>
                     </article>
 
                 </div>
