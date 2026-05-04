@@ -252,3 +252,70 @@ if (navTrackedSections.length && navSectionLinks.length) {
 
     navTrackedSections.forEach((section) => navObserver.observe(section));
 }
+
+/* ── Growth Acceleration telemetry ─────────── */
+const growthSection = document.querySelector('.growth-acceleration-section');
+
+if (growthSection) {
+    const growthCards = Array.from(growthSection.querySelectorAll('.growth-card'));
+    const growthValues = Array.from(growthSection.querySelectorAll('.growth-value'));
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let growthActivated = false;
+
+    const animateGrowthValue = (node, targetValue) => {
+        if (!Number.isFinite(targetValue) || targetValue < 0) {
+            return;
+        }
+
+        if (reducedMotion) {
+            node.textContent = String(targetValue);
+            return;
+        }
+
+        const duration = 1350;
+        const startTime = performance.now();
+
+        const step = (time) => {
+            const elapsed = time - startTime;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            node.textContent = String(Math.round(targetValue * eased));
+
+            if (progress < 1) {
+                requestAnimationFrame(step);
+            }
+        };
+
+        requestAnimationFrame(step);
+    };
+
+    const activateGrowthTelemetry = () => {
+        if (growthActivated) {
+            return;
+        }
+
+        growthActivated = true;
+        growthCards.forEach((card) => card.classList.add('is-live'));
+        growthValues.forEach((valueNode) => {
+            const targetValue = Number(valueNode.getAttribute('data-count-to'));
+            animateGrowthValue(valueNode, targetValue);
+        });
+    };
+
+    const growthObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    activateGrowthTelemetry();
+                    growthObserver.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.3,
+            rootMargin: '0px 0px -12% 0px'
+        }
+    );
+
+    growthObserver.observe(growthSection);
+}
