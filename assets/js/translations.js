@@ -1,8 +1,8 @@
 const TRANSLATIONS = {
     en: {
         nav: {
-            about: "About", education: "Education", experience: "Experience",
-            skills: "Skills", contributions: "Contributions", tools: "Tech Stack", contact: "Contact", theme: "Theme"
+            about: "About", kpi: "KPI", education: "Education", experience: "Experience",
+            skills: "Skills", contributions: "Contributions", aiSignals: "AI Signals", tools: "Tech Stack", contact: "Contact", theme: "Theme"
         },
         hero: {
             badge: "Software Engineer – Insurance and Healthcare Systems",
@@ -75,8 +75,8 @@ const TRANSLATIONS = {
 
     fr: {
         nav: {
-            about: "À propos", education: "Formation", experience: "Expérience",
-            skills: "Compétences", contributions: "Contributions", tools: "Stack Tech", contact: "Contact", theme: "Thème"
+            about: "À propos", kpi: "KPI", education: "Formation", experience: "Expérience",
+            skills: "Compétences", contributions: "Contributions", aiSignals: "Signaux IA", tools: "Stack Tech", contact: "Contact", theme: "Thème"
         },
         hero: {
             badge: "Ingénieur Logiciel – Systèmes d'assurance et de santé",
@@ -149,8 +149,8 @@ const TRANSLATIONS = {
 
     ar: {
         nav: {
-            about: "نبذة عني", education: "التعليم", experience: "الخبرة",
-            skills: "المهارات", contributions: "المساهمات", tools: "التقنيات", contact: "التواصل", theme: "المظهر"
+            about: "نبذة عني", kpi: "KPI", education: "التعليم", experience: "الخبرة",
+            skills: "المهارات", contributions: "المساهمات", aiSignals: "إشارات الذكاء", tools: "التقنيات", contact: "التواصل", theme: "المظهر"
         },
         hero: {
             badge: "مهندس برمجيات – أنظمة التأمين والرعاية الصحية",
