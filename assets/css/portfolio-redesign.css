@@ -262,8 +262,8 @@ a {
 .nav-group-menu {
     position: absolute;
     top: calc(100% + 12px);
-    left: 0;
-    min-width: 255px;
+    left: 50%;
+    min-width: 220px;
     background: var(--nav-menu-bg);
     border: 1px solid var(--nav-menu-border);
     border-radius: 12px;
@@ -272,7 +272,7 @@ a {
     display: grid;
     gap: 0;
     opacity: 0;
-    transform: translateY(-6px);
+    transform: translateX(-50%) translateY(-6px);
     pointer-events: none;
     transition: opacity 180ms ease, transform 180ms ease;
     z-index: 120;
@@ -282,18 +282,18 @@ a {
     content: "";
     position: absolute;
     top: -8px;
-    right: 18px;
+    left: 50%;
     width: 14px;
     height: 14px;
     background: var(--nav-menu-bg);
     border-left: 1px solid var(--nav-menu-border);
     border-top: 1px solid var(--nav-menu-border);
-    transform: rotate(45deg);
+    transform: translateX(-50%) rotate(45deg);
 }
 
 .nav-group-dropdown.is-open .nav-group-menu {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
     pointer-events: auto;
 }
 
@@ -356,7 +356,6 @@ a {
 
 .nav-mobile-dropdown {
     display: none;
-    position: relative;
 }
 
 .nav-mobile-btn {
@@ -385,16 +384,18 @@ a {
 
 .nav-mobile-menu {
     position: absolute;
-    top: calc(100% + 10px);
+    top: 100%;
+    left: 0;
     right: 0;
-    width: min(84vw, 320px);
+    width: 100%;
     background: var(--nav-menu-bg);
     border: 1px solid var(--nav-menu-border);
-    border-radius: 12px;
+    border-top: none;
+    border-radius: 0 0 16px 16px;
     box-shadow: var(--nav-menu-shadow);
-    padding: 10px;
+    padding: 16px;
     display: grid;
-    gap: 8px;
+    gap: 12px;
     opacity: 0;
     transform: translateY(-6px);
     pointer-events: none;
@@ -410,7 +411,7 @@ a {
 
 .nav-mobile-group {
     display: grid;
-    gap: 0;
+    gap: 2px;
 }
 
 .nav-mobile-label {
@@ -425,16 +426,23 @@ a {
 
 .nav-mobile-menu a {
     display: block;
-    padding: 10px 8px;
-    border-bottom: 1px solid var(--nav-menu-divider);
+    padding: 11px 12px;
+    border-radius: 8px;
+    border-bottom: none;
     color: var(--nav-menu-text);
-    font-size: 0.85rem;
+    font-size: 0.88rem;
     transition: color 180ms ease, background-color 180ms ease;
 }
 
 .nav-mobile-menu a:hover {
     color: var(--nav-menu-text-hover);
     background: var(--nav-menu-hover-bg);
+}
+
+.nav-mobile-menu > .nav-mobile-groups-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
 }
 
 .nav-mobile-group a:last-child {
