@@ -19,18 +19,40 @@
 <body>
     <nav class="site-nav">
         <div class="container nav-inner">
-            <a class="brand" href="#top">Dhafer<span>.Slimi</span></a>
-            <div class="nav-links">
-                <a href="#about" data-i18n="nav.about">About</a>
-                <a href="#kpi" data-i18n="nav.kpi">KPI</a>
-                <a href="#education" data-i18n="nav.education">Education</a>
-                <a href="#experience" data-i18n="nav.experience">Experience</a>
-                <a href="#skills" data-i18n="nav.skills">Skills</a>
-                <a href="#contributions" data-i18n="nav.contributions">Contributions</a>
-                <a href="#ai-signals" data-i18n="nav.aiSignals">AI Signals</a>
-                <a href="#tools" data-i18n="nav.tools">Tech Stack</a>
-                <a href="#contact" data-i18n="nav.contact">Contact</a>
+            <div class="nav-left">
+                <a class="brand" href="#top">Dhafer<span>.Slimi</span></a>
+                <div class="nav-links">
+                    <div class="nav-group-dropdown" data-nav-group="about">
+                        <button class="nav-group-btn" type="button" aria-expanded="false">
+                            <span data-i18n="nav.about">About</span>
+                            <svg class="nav-group-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="nav-group-menu" role="menu" aria-label="About navigation">
+                            <a href="#about" data-i18n="nav.generalInfo">General Info</a>
+                            <a href="#education" data-i18n="nav.education">Education</a>
+                            <a href="#experience" data-i18n="nav.experience">Experience</a>
+                            <a href="#skills" data-i18n="nav.skills">Skills</a>
+                        </div>
+                    </div>
+                    <div class="nav-group-dropdown" data-nav-group="engineering">
+                        <button class="nav-group-btn" type="button" aria-expanded="false">
+                            <span data-i18n="nav.engineering">Engineering</span>
+                            <svg class="nav-group-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <div class="nav-group-menu" role="menu" aria-label="Engineering navigation">
+                            <a href="#kpi" data-i18n="nav.kpi">KPI</a>
+                            <a href="#contributions" data-i18n="nav.contributions">Contributions</a>
+                            <a href="#ai-signals" data-i18n="nav.aiSignals">AI Signals</a>
+                            <a href="#tools" data-i18n="nav.tools">Tech Stack</a>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="nav-current-title" id="nav-current-title">General Info</div>
+
+            <div class="nav-utils">
+                <a class="nav-contact-link" href="#contact" data-i18n="nav.contact">Contact</a>
             <div class="lang-switcher">
                 <button class="lang-btn" aria-label="Select language" aria-expanded="false">
                     <span class="lang-current">EN</span>
@@ -50,6 +72,7 @@
                 <svg class="icon-sun" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
                 <svg class="icon-moon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
             </button>
+            </div>
         </div>
     </nav>
 

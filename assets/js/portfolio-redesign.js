@@ -145,3 +145,77 @@ if (themeToggleBtn) {
         applyTheme(isLight ? 'dark' : 'light');
     });
 }
+
+/* ── Nav Group Dropdowns ───────────────────── */
+const navGroups = document.querySelectorAll('.nav-group-dropdown');
+const navCenterTitle = document.getElementById('nav-current-title');
+
+if (navGroups.length) {
+    const closeAllNavGroups = () => {
+        navGroups.forEach((group) => {
+            group.classList.remove('is-open');
+            const btn = group.querySelector('.nav-group-btn');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+        });
+    };
+
+    navGroups.forEach((group) => {
+        const btn = group.querySelector('.nav-group-btn');
+        if (!btn) return;
+
+        btn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = group.classList.contains('is-open');
+            closeAllNavGroups();
+            if (!isOpen) {
+                group.classList.add('is-open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+
+    document.addEventListener('click', closeAllNavGroups);
+}
+
+/* ── Nav Active Section + Center Title ─────── */
+const navTrackedSections = document.querySelectorAll('section[id], header[id]');
+const navSectionLinks = document.querySelectorAll('.nav-group-menu a, .nav-contact-link');
+
+if (navTrackedSections.length && navSectionLinks.length) {
+    const setNavActiveSection = (id) => {
+        let activeText = null;
+
+        navSectionLinks.forEach((link) => {
+            const isActive = link.getAttribute('href') === `#${id}`;
+            link.classList.toggle('is-active', isActive);
+            if (isActive) activeText = link.textContent.trim();
+        });
+
+        navGroups.forEach((group) => {
+            const groupButton = group.querySelector('.nav-group-btn');
+            const hasActiveChild = !!group.querySelector('.nav-group-menu a.is-active');
+            if (groupButton) groupButton.classList.toggle('is-active', hasActiveChild);
+        });
+
+        if (navCenterTitle && activeText) {
+            navCenterTitle.textContent = activeText;
+        }
+    };
+
+    const navObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setNavActiveSection(entry.target.id);
+                }
+            });
+        },
+        {
+            root: null,
+            rootMargin: '-28% 0px -62% 0px',
+            threshold: 0
+        }
+    );
+
+    navTrackedSections.forEach((section) => navObserver.observe(section));
+}
