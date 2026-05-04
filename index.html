@@ -49,9 +49,30 @@
                 </div>
             </div>
 
-            <div class="nav-current-title" id="nav-current-title">General Info</div>
-
             <div class="nav-utils">
+                <div class="nav-mobile-dropdown" id="nav-mobile-dropdown">
+                    <button class="nav-mobile-btn" type="button" aria-expanded="false" aria-label="Open mobile menu">
+                        <span data-i18n="nav.menu">Menu</span>
+                        <svg class="nav-mobile-arrow" width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </button>
+                    <div class="nav-mobile-menu" role="menu" aria-label="Mobile navigation">
+                        <div class="nav-mobile-group">
+                            <span class="nav-mobile-label" data-i18n="nav.about">About</span>
+                            <a href="#about" data-i18n="nav.generalInfo">General Info</a>
+                            <a href="#education" data-i18n="nav.education">Education</a>
+                            <a href="#experience" data-i18n="nav.experience">Experience</a>
+                            <a href="#skills" data-i18n="nav.skills">Skills</a>
+                        </div>
+                        <div class="nav-mobile-group">
+                            <span class="nav-mobile-label" data-i18n="nav.engineering">Engineering</span>
+                            <a href="#kpi" data-i18n="nav.kpi">KPI</a>
+                            <a href="#contributions" data-i18n="nav.contributions">Contributions</a>
+                            <a href="#ai-signals" data-i18n="nav.aiSignals">AI Signals</a>
+                            <a href="#tools" data-i18n="nav.tools">Tech Stack</a>
+                        </div>
+                        <a class="nav-mobile-contact" href="#contact" data-i18n="nav.contact">Contact</a>
+                    </div>
+                </div>
                 <a class="nav-contact-link" href="#contact" data-i18n="nav.contact">Contact</a>
             <div class="lang-switcher">
                 <button class="lang-btn" aria-label="Select language" aria-expanded="false">

@@ -92,6 +92,7 @@ body {
         radial-gradient(900px 400px at 10% 15%, rgba(126, 92, 255, 0.14), transparent 65%),
         linear-gradient(160deg, #05070d 0%, #070c18 45%, #06080f 100%);
     line-height: 1.55;
+    overflow-x: hidden;
 }
 
 html.light body {
@@ -349,6 +350,113 @@ a {
     gap: 10px;
 }
 
+.nav-current-title {
+    display: none;
+}
+
+.nav-mobile-dropdown {
+    display: none;
+    position: relative;
+}
+
+.nav-mobile-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--nav-pill-border);
+    background: var(--nav-pill-bg);
+    color: var(--nav-pill-text);
+    border-radius: 11px;
+    padding: 8px 12px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.nav-mobile-arrow {
+    transition: transform 180ms ease;
+}
+
+.nav-mobile-dropdown.is-open .nav-mobile-arrow {
+    transform: rotate(180deg);
+}
+
+.nav-mobile-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: min(84vw, 320px);
+    background: var(--nav-menu-bg);
+    border: 1px solid var(--nav-menu-border);
+    border-radius: 12px;
+    box-shadow: var(--nav-menu-shadow);
+    padding: 10px;
+    display: grid;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+    z-index: 140;
+}
+
+.nav-mobile-dropdown.is-open .nav-mobile-menu {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.nav-mobile-group {
+    display: grid;
+    gap: 0;
+}
+
+.nav-mobile-label {
+    display: block;
+    padding: 6px 8px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.nav-mobile-menu a {
+    display: block;
+    padding: 10px 8px;
+    border-bottom: 1px solid var(--nav-menu-divider);
+    color: var(--nav-menu-text);
+    font-size: 0.85rem;
+    transition: color 180ms ease, background-color 180ms ease;
+}
+
+.nav-mobile-menu a:hover {
+    color: var(--nav-menu-text-hover);
+    background: var(--nav-menu-hover-bg);
+}
+
+.nav-mobile-group a:last-child {
+    border-bottom: none;
+}
+
+.nav-mobile-contact {
+    margin-top: 4px;
+    border: 1px solid var(--nav-contact-border);
+    background: var(--nav-contact-bg);
+    color: var(--nav-contact-text);
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+    border-bottom: none !important;
+}
+
+.nav-mobile-contact:hover {
+    background: var(--nav-contact-bg-hover);
+    border-color: var(--nav-contact-border-hover);
+}
+
 .nav-contact-link {
     border: 1px solid var(--nav-contact-border);
     background: var(--nav-contact-bg);
@@ -371,6 +479,70 @@ a {
 @media (max-width: 1080px) {
     .nav-current-title {
         display: none;
+    }
+}
+
+@media (max-width: 760px) {
+    .container {
+        width: min(1140px, 94vw);
+    }
+
+    .site-nav {
+        padding: 8px 0;
+    }
+
+    .nav-inner {
+        min-height: 0;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .nav-left,
+    .nav-utils {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .nav-left {
+        gap: 0;
+    }
+
+    .brand {
+        font-size: 1rem;
+    }
+
+    .nav-utils {
+        gap: 6px;
+        flex-wrap: wrap;
+    }
+
+    .lang-btn {
+        padding: 6px 9px;
+    }
+
+    .theme-toggle {
+        padding: 6px 8px;
+        gap: 7px;
+    }
+
+    .theme-label {
+        display: none;
+    }
+
+    .nav-links,
+    .nav-contact-link {
+        display: none;
+    }
+
+    .nav-mobile-dropdown {
+        display: block;
+    }
+
+    .clients-section {
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
     }
 }
 
@@ -1314,6 +1486,7 @@ html.light .ai-signal-tag {
 /* ── Clients ──────────────────────────────── */
 .clients-section {
     padding: 28px 0 32px;
+    background: #081128;
     border-top: 1px solid rgba(120, 140, 255, 0.12);
     border-bottom: 1px solid rgba(120, 140, 255, 0.12);
     overflow: hidden;

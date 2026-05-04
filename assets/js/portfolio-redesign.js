@@ -149,6 +149,7 @@ if (themeToggleBtn) {
 /* ── Nav Group Dropdowns ───────────────────── */
 const navGroups = document.querySelectorAll('.nav-group-dropdown');
 const navCenterTitle = document.getElementById('nav-current-title');
+const navMobileDropdown = document.getElementById('nav-mobile-dropdown');
 
 if (navGroups.length) {
     const closeAllNavGroups = () => {
@@ -175,6 +176,38 @@ if (navGroups.length) {
     });
 
     document.addEventListener('click', closeAllNavGroups);
+}
+
+/* ── Mobile Unified Nav Dropdown ───────────── */
+if (navMobileDropdown) {
+    const mobileBtn = navMobileDropdown.querySelector('.nav-mobile-btn');
+    const mobileLinks = navMobileDropdown.querySelectorAll('.nav-mobile-menu a');
+
+    const closeMobileNav = () => {
+        navMobileDropdown.classList.remove('is-open');
+        if (mobileBtn) mobileBtn.setAttribute('aria-expanded', 'false');
+    };
+
+    if (mobileBtn) {
+        mobileBtn.addEventListener('click', (e) => {
+            e.stopPropagation();
+            const isOpen = navMobileDropdown.classList.contains('is-open');
+            closeMobileNav();
+            if (!isOpen) {
+                navMobileDropdown.classList.add('is-open');
+                mobileBtn.setAttribute('aria-expanded', 'true');
+            }
+        });
+    }
+
+    mobileLinks.forEach((link) => {
+        link.addEventListener('click', closeMobileNav);
+    });
+
+    document.addEventListener('click', closeMobileNav);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMobileNav();
+    });
 }
 
 /* ── Nav Active Section + Center Title ─────── */
